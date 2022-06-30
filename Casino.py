@@ -5,13 +5,12 @@ import os
 """
     TODO: 
      - Add game_data file to save users data after game conclusion
-     - SPELL CHECK ! 
      - Verify type(user inputs ) == int 
 """
 
 def age_verification():
     user_age = int(input("Please input your age to continue: "))
-    if user_age < 18:
+    if user_age < 18: 
         playable_age = abs(18 - user_age) 
         print("Why are you gambling at age " + str(user_age) + "...") 
         print("Please leave and return when your 18 years of age in " + str(playable_age) + " years. Thank you")
@@ -47,7 +46,7 @@ def play_game(money):
 
     while (playing == True):
         #Main Game
-        play_money = int(input("Out of your " + money + "$ how much would you like to gamble with:"))
+        play_money = int(input("Out of your " + str(money) + "$ how much would you like to gamble with:"))
         dice_roll = random.randint(1,6)
 
         if(play_money > int(money) or play_money == 0):
@@ -90,9 +89,6 @@ def play_game(money):
             print("Thank you for playing!")
             sleep(5)
             exit()
-        else: 
-            print("invalid input")
-            pass # if user_input =! 'y' or 'n' -> continue playing
 
 #Main 
 def run_casino():
