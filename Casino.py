@@ -80,6 +80,7 @@ def play_game(money):
         print("You now have : " + str(money) + "$")
         play_again = input("Would you like to continue to play ? (y/n): ")
         if(play_again == "y" or play_again == "Y"):
+            os.system("cls")
             pass
         if(play_again == "n" or play_again == "N"):
             playing = False
