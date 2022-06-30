@@ -4,8 +4,8 @@ import os
 
 """
     TODO: 
-     - Add game_data file to save users data after game conclution
-     - SPEEL CHECK ! 
+     - Add game_data file to save users data after game conclusion
+     - SPELL CHECK ! 
      - Verify type(user inputs ) == int 
 """
 
@@ -22,7 +22,7 @@ def age_verification():
 
 def obtain_data():
     name = input("Please enter your name here: ")
-    money = input("How much money are you gambaling with today: ")
+    money = input("How much money are you gambling with today: ")
     return name, money
 
 def print_data(name, money):
@@ -64,7 +64,7 @@ def play_game(money):
             if(dice_roll == user_guess ):
                 won_money = play_money * 2 
                 money = int(money) + won_money
-                print("Wow congradulations! you have won " + str(won_money) + "$")
+                print("Wow congratulations! you have won " + str(won_money) + "$")
             else:
                 print("Yikes you lost :(")
                 money = int(money) - play_money
@@ -86,7 +86,7 @@ def play_game(money):
             playing = False
             os.system("cls")
             print("---Results---")
-            print("You srated with " + str(starting_money) + "$ and now have " + str(money) + "$")
+            print("You stated with " + str(starting_money) + "$ and now have " + str(money) + "$")
             print("Thank you for playing!")
             sleep(5)
             exit()
