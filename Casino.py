@@ -26,6 +26,7 @@ def existing_file():
     print("Welcome back, " + name + "You have " + str(money) + "$ to play with")
     game_data.close()
 
+#File Handling 
 if os.path.exists("game_data.txt"):
     game_data = open("game_data.txt","r+") 
     existing_file()
@@ -46,8 +47,7 @@ def age_verification():
         pass
 
 def obtain_data():
-    #File Handling 
-    game_data = open("game_data.txt"    )
+    game_data = open("game_data.txt")
     if os.path.exists("game_data.txt"):
         game_data.readline() # Heading
         name = game_data.readline()
