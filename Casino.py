@@ -43,7 +43,7 @@ def age_verification():
         print("Please leave and return when your 18 years of age in " + str(playable_age) + " years. Thank you")
         os.remove("game_data.txt")
         exit()
-    if user_age > 18:
+    if user_age >= 18:
         pass
 
 def obtain_data():
@@ -75,7 +75,6 @@ def play_game(money):
 
     while (playing == True):
         #Main Game
-        
         play_money = int(input("Out of your " + str(money) + "$ how much would you like to gamble with:"))
         dice_roll = random.randint(1,6)
 
