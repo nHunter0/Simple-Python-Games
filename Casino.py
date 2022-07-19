@@ -14,8 +14,8 @@ def new_file():
     game_data.write("-CASINO-GAME-DATA-" + "\n")
     game_data.write(str(name) + "\n")
     game_data.write(str(money) + "\n") 
-    print("Hello, " + name)
-    print("You have " + str(money) + "$ to play with")
+    print("Hello, " + name.strip() )
+    print("You have " + str(money).strip() + "$ to play with")
     game_data.close()
 
 def existing_file():
@@ -23,7 +23,8 @@ def existing_file():
     game_data.readline() # Heading
     name = game_data.readline()
     money = game_data.readline()
-    print("Welcome back, " + name + "You have " + str(money) + "$ to play with")
+    print("Welcome back, " + name.strip() ) 
+    print("You have " + str(money).strip() + "$ to play with")
     game_data.close()
 
 #File Handling 
@@ -43,7 +44,7 @@ def age_verification():
         print("Please leave and return when your 18 years of age in " + str(playable_age) + " years. Thank you")
         os.remove("game_data.txt")
         exit()
-    if user_age >= 18:
+    if user_age > 18:
         pass
 
 def obtain_data():
@@ -52,7 +53,7 @@ def obtain_data():
         game_data.readline() # Heading
         name = game_data.readline()
         money = game_data.readline()
-        return name, money
+        return name.strip(), money.strip()
     else:    
         print("Problem with game_data file")
         exit()
